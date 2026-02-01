@@ -24,7 +24,9 @@ app.get '/favicon.ico', (req, res) ->
 app.get '/*', (req, res) ->
 	res.sendFile path.resolve __dirname + folder + '/index.html'
 
-port = process.env.PORT or 5000
-app.listen port, () -> console.log "Server listening on port \"#{port}\""
+# Only listen in local development, not on Vercel
+unless process.env.VERCEL
+	port = process.env.PORT or 5000
+	app.listen port, () -> console.log "Server listening on port \"#{port}\""
 
 module.exports = app
