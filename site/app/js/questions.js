@@ -1,114 +1,99 @@
 export default {
-    current: null,
-    more: [
-        {
-            answer: 'Andy Murray',
-            questions: [
-                'Who won Wimbledon in 2016?',
-                'Who won an Olympic Gold in Cycling?',
-                'Who is as tall as a leprechaun?',
-                'Who is a world-famous caber-tosser?',
-                'Who has three nipples?',
-                'Who is 19 years old?',
-                'Who built Rome in 7 days?',
-                'Who has a fear of Morocco?',
-                'Who is Batman?',
-                'Who has an IQ of 263?'
-            ]
-        },
-        {
-            answer: 'Katniss Everdeen',
-            questions: [
-                'Who won the Hunger Games?',
-                'Who was Harry Potter’s best friend?',
-                'Who sang ‘Gangnam Style’?',
-                'Who painted the ‘Mona Lisa’?',
-                'Who has a vertical leap of 9 feet?',
-                'What is a village in Southern Italy?',
-                'What is a brand of Slug Repellent?',
-                'Who is the Gym Leader in Pallet Town?',
-                'Who is stuck on Mars in ‘The Martian’?'
-            ]
-        },
-        {
-            answer: 'Arsenal',
-            questions: [
-                'Who play at the Emirates Stadium?',
-                'Who are the domestic champions of France?',
-                'Which team\'s mascot is an eagle?',
-                'Where would one store their boating oars?',
-                'Where are<br/>the 13 most expensive rabbits?',
-                'What is the ‘Jewel of California Bay’?',
-                'What is the 13th month called?',
-                'Who founded Facebook?'
-            ]
-        },
-        {
-            answer: 'Nice, France',
-            questions: [
-                'Where is the Promenade des Anglais?',
-                'What is a type of biscuit?',
-                'What is an inland french town?',
-                'How do you spell ‘millennium’?',
-                'What letter comes after ‘J’?',
-                'Where does the Queen get buried?',
-                'Where are weetabix made?'
-            ]
-        },
-        {
-            answer: 'Canterbury Cathedral',
-            questions: [
-                'Where did<br/>we both graduate from university?',
-                'Where did Andy Murray win the US Open?',
-                'Where is<br/>the world’s largest swimming pool?',
-                'Where are the Crown Jewels kept?',
-                'Where did Charles Darwin write Origin of Species?',
-                'Which UK Building is taller than Everest?'
-            ]
-        },
-        {
-            answer: 'Pride and Prejudice',
-            questions: [
-                'What movie will I never watch again?',
-                'What is a great Xbox game?',
-                'What does the Pope’s tattoo say?',
-                'What is JK Rowling’s best selling book?',
-                'What is UKIP’s official motto?'
-            ]
-        },
-        {
-            answer: 'Penguin',
-            questions: [
-                'What is the best, cutest animal?',
-                'What is the fastest animal on earth?',
-                'What is bright red?',
-                'What does Pikachu evolve into?'
-            ]
-        },
-        {
-            answer: 'Origins Bar, Darwin College',
-            questions: [
-                'Where did we meet?',
-                'Dude, where’s my car?',
-                'Where have all the muffins gone?'
-            ]
-        },
-        {
-            answer: 'Five',
-            questions: [
-                'How many years have we been together?',
-                'How old is Elvis Presley?'
-            ]
-        },
-        {
-            answer: 'YES!',
-            questions: [
-                'Manny,<br/>will you<br/>marry me?'
-            ]
-        }
-    ],
-    nextQuestion: function() {
-        this.current = this.more.shift();
-        return !!(this.current);
-    }
+  current: null,
+  more: [
+    {
+      question: "Năm nào iPhone đầu tiên được ra mắt?",
+      answers: [
+        "2007",
+        "2005",
+        "2008",
+        "2006",
+        "2009",
+        "2010",
+        "2004",
+        "2011",
+        "2003",
+        "2012",
+      ],
+    },
+    {
+      question: "Đàn violin có bao nhiêu dây?",
+      answers: ["4", "5", "6", "3", "8", "2", "7", "9", "10", "12"],
+    },
+    {
+      question: "Thủ đô của Nhật Bản là gì?",
+      answers: [
+        "Tokyo",
+        "Kyoto",
+        "Osaka",
+        "Nagoya",
+        "Yokohama",
+        "Sapporo",
+        "Hiroshima",
+        "Kobe",
+        "Fukuoka",
+        "Kawasaki",
+      ],
+    },
+    {
+      question: "Trái đất có bao nhiêu châu lục?",
+      answers: ["7", "5", "6", "8", "4", "9", "3", "10", "2", "11"],
+    },
+    {
+      question: "Chuối chín thường có màu gì?",
+      answers: [
+        "Vàng",
+        "Xanh",
+        "Nâu",
+        "Đỏ",
+        "Tím",
+        "Cam",
+        "Trắng",
+        "Đen",
+        "Hồng",
+        "Xanh dương",
+      ],
+    },
+    {
+      question: "Một giờ có bao nhiêu phút?",
+      answers: ["60", "50", "70", "40", "80", "30", "100", "120", "45", "90"],
+    },
+    {
+      question: "Hành tinh nào gần Mặt Trời nhất?",
+      answers: [
+        "Sao Thủy",
+        "Sao Kim",
+        "Trái Đất",
+        "Sao Hỏa",
+        "Sao Mộc",
+        "Sao Thổ",
+        "Sao Thiên Vương",
+        "Sao Hải Vương",
+        "Sao Diêm Vương",
+        "Tiểu hành tinh",
+      ],
+    },
+
+    // ❤️ FINAL QUESTION
+    {
+      question:
+        "Câu hỏi cuối cùng: ",
+      isFinalQuestion: true,
+      answers: [
+        "Có 💕",    
+        "Để em suy nghĩ thêm",
+        "Có thể, nhưng chưa phải bây giờ",
+        "Em cần thêm thời gian",
+        "Em chưa sẵn sàng",
+        "Mình làm bạn trước được không?",
+        "Câu này làm em bất ngờ quá",
+        "Anh hỏi nghiêm túc à?",
+      ],
+    },
+  ],
+
+  nextQuestion: function () {
+    this.current = this.more.shift();
+    return !!this.current;
+  },
 };

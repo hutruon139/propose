@@ -258,6 +258,7 @@ html, body {
         word-wrap: break-word;
         opacity: 1;
         transition: opacity 0.5s;
+        font-size: 20px;
     }
 
     .color(@col) {
@@ -487,4 +488,166 @@ html, body {
 @keyframes cele-shake-3 {
     0%, 100% { transform: rotate(-5deg - @shakeAmount); }
     50%      { transform: rotate(-5deg + @shakeAmount); }
+}
+
+#sad-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .sad-face {
+        font-size: 200px;
+        animation: sad-pop-in 0.4s ease-out;
+    }
+}
+
+@keyframes sad-pop-in {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Responsive Design for Smaller Screens
+@media (max-width: 768px) {
+    .title {
+        font-size: 28px;
+        
+        .capital {
+            font-size: 35px;
+        }
+    }
+
+    #welcome {
+        @w: 90%;
+        @h: auto;
+        width: @w;
+        margin-left: -(90% / 2);
+        padding: 25px;
+
+        > h2 {
+            font-size: 24px;
+        }
+
+        > p {
+            font-size: 16px;
+            margin: 12px 0;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+    }
+
+    #answer {
+        font-size: 32px;
+    }
+
+    #caption {
+        font-size: 14px;
+    }
+
+    .balloon {
+        > span {
+            font-size: 23px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 22px;
+        
+        .capital {
+            font-size: 28px;
+        }
+    }
+
+    #welcome {
+        @w: 95%;
+        width: @w;
+        margin-left: -(95% / 2);
+        padding: 20px;
+        top: 40%;
+
+        > h2 {
+            font-size: 20px;
+        }
+
+        > p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+    }
+
+    #answer {
+        font-size: 26px;
+        top: 35vh;
+    }
+
+    #caption {
+        font-size: 12px;
+        top: ~"calc(35vh - 20px)";
+    }
+
+    .balloon {
+        @w: 100px;
+        @h: 150px;
+        width: @w;
+        height: @h;
+        margin: -@h -(@w / 2) 0 -(@w / 2);
+        padding: 0 4px 16px 4px;
+
+        > span {
+            font-size: 21px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .title {
+        font-size: 18px;
+        
+        .capital {
+            font-size: 24px;
+        }
+    }
+
+    #answer {
+        font-size: 22px;
+    }
+
+    #caption {
+        font-size: 11px;
+    }
+
+    .balloon {
+        @w: 90px;
+        @h: 140px;
+        width: @w;
+        height: @h;
+        margin: -@h -(@w / 2) 0 -(@w / 2);
+        padding: 0 3px 14px 3px;
+
+        > span {
+            font-size: 20px;
+        }
+    }
 }
