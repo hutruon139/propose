@@ -1,19 +1,8 @@
 {
   "version": 2,
   "buildCommand": "cd site && npm install && npm run build",
+  "outputDirectory": "site/dist",
   "routes": [
-    {
-      "src": "/images/(.*)",
-      "dest": "site/dist/images/$1"
-    },
-    {
-      "src": "/css/(.*)",
-      "dest": "site/dist/css/$1"
-    },
-    {
-      "src": "/js/(.*)",
-      "dest": "site/dist/js/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "/api/index.js"
