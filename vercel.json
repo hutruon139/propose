@@ -3,7 +3,7 @@
   "buildCommand": "cd site && npm install && npm run build",
   "functions": {
     "api/index.js": {
-      "runtime": "nodejs24.x"
+      "runtime": "@vercel/node@3"
     }
   },
   "routes": [
