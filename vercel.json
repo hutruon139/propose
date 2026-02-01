@@ -1,12 +1,27 @@
 {
   "version": 2,
-  "buildCommand": "npm install && cd site && npm install && npm run build",
-  "outputDirectory": "site/dist",
-  "framework": "express",
+  "buildCommand": "cd site && npm install && npm run build",
   "functions": {
     "api/index.js": {
-      "memory": 128,
-      "maxDuration": 10
+      "runtime": "nodejs24.x"
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/images/(.*)",
+      "dest": "site/dist/images/$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "site/dist/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "site/dist/js/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
+    }
+  ]
 }
