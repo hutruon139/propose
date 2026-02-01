@@ -1,18 +1,12 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.js",
-      "use": "@vercel/node"
+  "buildCommand": "npm install && cd site && npm install && npm run build",
+  "outputDirectory": "site/dist",
+  "framework": "express",
+  "functions": {
+    "api/index.js": {
+      "memory": 128,
+      "maxDuration": 10
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/index.js"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
   }
 }
