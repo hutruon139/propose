@@ -85,8 +85,6 @@ export default {
         "Có thể, nhưng chưa phải bây giờ",
         "Em cần thêm thời gian",
         "Em chưa sẵn sàng",
-        "Mình làm bạn trước được không?",
-        "Câu này làm em bất ngờ quá",
         "Anh hỏi nghiêm túc à?",
       ],
     },
