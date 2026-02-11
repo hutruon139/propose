@@ -2,6 +2,9 @@
   "version": 2,
   "buildCommand": "cd site && npm install && npm run build",
   "outputDirectory": "site/dist",
+  "env": {
+    "NODE_ENV": "production"
+  },
   "routes": [
     {
       "src": "/(.*)",
