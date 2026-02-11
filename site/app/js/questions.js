@@ -82,10 +82,7 @@ export default {
       answers: [
         "Có 💕",    
         "Để em suy nghĩ thêm",
-        "Có thể, nhưng chưa phải bây giờ",
-        "Em cần thêm thời gian",
-        "Em chưa sẵn sàng",
-        "Anh hỏi nghiêm túc à?",
+        "Không",
       ],
     },
   ],
